@@ -1,6 +1,6 @@
 # hanwool_silbi_webapp.py
-# 한울지점 실손의료비 계산기 - 모바일 반응형 웹앱
-# 실행: streamlit run hanwool_silbi_webapp.py
+# 한울지점 실손의료비 계산기 - 모바일 반응형 웹앱 V5
+# 실행: streamlit run hanwool_silbi_webapp_mobile_v5.py
 
 import streamlit as st
 from dataclasses import dataclass
@@ -176,6 +176,82 @@ div[role="radiogroup"] label {
         gap: 0.45rem;
     }
 }
+
+/* V5: 모바일/다크모드 글자색 강제 보정 */
+.stApp, .stApp * {
+    color: #2f2f2f !important;
+    opacity: 1 !important;
+}
+.stApp {
+    background-color: #faf7ee !important;
+}
+div[data-testid="stMarkdownContainer"],
+div[data-testid="stMarkdownContainer"] *,
+div[data-testid="stWidgetLabel"],
+div[data-testid="stWidgetLabel"] *,
+div[role="radiogroup"],
+div[role="radiogroup"] *,
+label, label *, p, span {
+    color: #2f2f2f !important;
+    opacity: 1 !important;
+}
+.notice-box, .notice-box * {
+    color: #b71c1c !important;
+    font-weight: 900 !important;
+}
+.result-title, .result-title * {
+    color: #0057b8 !important;
+}
+.final-pay, .final-pay * {
+    color: #0066ff !important;
+    font-weight: 950 !important;
+}
+.own-pay, .own-pay * {
+    color: #d32f2f !important;
+}
+.stButton > button,
+.stButton > button *,
+button[kind="primary"],
+button[kind="primary"] * {
+    background: #303030 !important;
+    color: #ffbc00 !important;
+    font-weight: 950 !important;
+}
+div[data-testid="stNumberInput"] input,
+div[data-testid="stTextInput"] input,
+div[data-testid="stDateInput"] input {
+    background-color: #fff3bf !important;
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    font-weight: 850 !important;
+}
+div[data-testid="stNumberInput"] button,
+div[data-testid="stNumberInput"] button * {
+    background-color: #303040 !important;
+    color: #ffffff !important;
+}
+div[data-testid="stAlert"],
+div[data-testid="stAlert"] * {
+    color: #2f2f2f !important;
+}
+@media (max-width: 900px) {
+    .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        max-width: 760px !important;
+    }
+    h1 {
+        font-size: 1.6rem !important;
+        text-align: left !important;
+    }
+    div[role="radiogroup"] {
+        gap: 0.25rem !important;
+    }
+    div[role="radiogroup"] label {
+        min-height: 34px !important;
+    }
+}
+
 </style>
 """,
     unsafe_allow_html=True,
