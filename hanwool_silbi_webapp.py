@@ -23,6 +23,43 @@ st.markdown(
 .stApp {
   background: var(--soft-bg);
 }
+/* 글씨 안 보임 방지: Streamlit 다크 테마에서도 본문을 강제로 진한 색으로 표시 */
+.stApp, .stApp p, .stApp div, .stApp span, .stApp label {
+  color: #2f2f2f !important;
+}
+section[data-testid="stSidebar"],
+section[data-testid="stSidebar"] * {
+  color: #f7f7f7 !important;
+}
+section[data-testid="stSidebar"] input,
+section[data-testid="stSidebar"] textarea {
+  color: #111111 !important;
+}
+div[data-testid="stTextInput"] label,
+div[data-testid="stNumberInput"] label,
+div[data-testid="stRadio"] label,
+div[data-testid="stSelectbox"] label {
+  color: #4a4a4a !important;
+  font-weight: 800 !important;
+}
+div[data-testid="stTextInput"] input,
+div[data-testid="stNumberInput"] input {
+  color: #111111 !important;
+  font-weight: 700 !important;
+}
+.notice, .notice * {
+  color: var(--warn-red) !important;
+}
+.result-title, .result-title * {
+  color: var(--kb-blue) !important;
+}
+.receive, .receive * {
+  color: var(--kb-blue) !important;
+}
+.patient, .patient * {
+  color: var(--warn-red) !important;
+}
+
 .main-title {
   color: var(--kb-dark);
   font-size: 30px;
